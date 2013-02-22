@@ -3,7 +3,6 @@
 }
 
 .block.block_course_contacts {
-	padding: 0;	
 }
 
 .block.block_course_contacts .content .ccard {
@@ -49,4 +48,13 @@
 .block.block_course_contacts .content .ccard .info .comms img {
 	margin-right: 3px;
 	
+}
+
+div.cocoemailmsgs{
+	text-align: center;
+	font-size: 1.5em;
+}
+
+div.cocoemailmsgs *{
+	margin: 1em;
 }
