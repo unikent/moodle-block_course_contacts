@@ -62,7 +62,7 @@ function quickmail_process_attachments($context, $email, $table, $id) {
 function quickmail_attachment_names($draft) {
     global $USER;
 
-    $usercontext = get_context_instance(CONTEXT_USER, $USER->id);
+    $usercontext = context_user::instance($USER->id);
 
     $fs = get_file_storage();
     $files = $fs->get_area_files($usercontext->id, 'user', 'draft', $draft, 'id');
