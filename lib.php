@@ -10,7 +10,7 @@ function quickmail_cleanup($table, $itemid) {
     // Clean up the files associated with this email
     if ($courseid = $DB->get_field($table, 'courseid', array('id' => $itemid))) {
         $fs = get_file_storage();
-        $context = get_context_instance(CONTEXT_COURSE, $courseid);
+        $context = context_course::instance($courseid);
         $files = $fs->get_area_files($context->id, $table, 'attachment', $itemid, 'id');
         foreach ($files as $file) {
             $file->delete();
