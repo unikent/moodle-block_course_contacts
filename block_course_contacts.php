@@ -226,7 +226,7 @@ class block_course_contacts extends block_base
                         if ($USER->id != $contact->id) {
                             // Should we display email?
                             if ($this->config->email == 1) {
-                                if ($CFG->block_co_co_simpleemail) {
+                                if (isset($CFG->block_co_co_simpleemail) && $CFG->block_co_co_simpleemail) {
                                     $url = new moodle_url('/blocks/course_contacts/email.php', array(
                                         'touid' => $contact->id,
                                         'cid' => $COURSE->id
