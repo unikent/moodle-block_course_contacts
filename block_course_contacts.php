@@ -17,15 +17,14 @@
 class block_course_contacts extends block_base
 {
     /**
-     *
+     * Init.
      */
     public function init() {
-        global $USER;
         $this->title = get_string('course_contacts', 'block_course_contacts');
     }
 
     /**
-     * a custom function for shortening names
+     * A custom function for shortening names.
      *
      * @param unknown $lname
      * @return unknown
@@ -42,10 +41,12 @@ class block_course_contacts extends block_base
             }
             $lname = substr($lname, 0, -1);
         }
+
         if (strpos($lname, ' ')) {
             $names = explode(' ', $lname);
             $lname = $names[0];
         }
+
         return $lname;
     }
 
