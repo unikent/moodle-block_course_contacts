@@ -151,8 +151,7 @@ class block_course_contacts extends block_base {
 		if(isset($this->config->inherit)){
 			$inherit = $this->config->inherit;
 		}
-		$userfields = 'u.id,u.lastaccess,u.firstname,u.lastname,u.email,u.phone1,u.picture,u.imagealt';
-		//debugging($context->id);
+		$userfields = \user_picture::fields('u', array('id','lastaccess','firstname','lastname','email','phone1','picture','imagealt'));
 		foreach($roles as $key=>$role){
 			$att = 'role_'.$key;
 			if(!empty($this->config->$att)){
